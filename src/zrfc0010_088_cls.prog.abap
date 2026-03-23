@@ -1,0 +1,18 @@
+*&---------------------------------------------------------------------*
+*& Include          ZRFC0010_088_CLS
+*&---------------------------------------------------------------------*
+CLASS LCL_EVENT_HANDELR DEFINITION.
+
+  PUBLIC SECTION.
+    CLASS-METHODS : ON_DATA_CHANGED FOR EVENT DATA_CHANGED OF CL_GUI_ALV_GRID
+      IMPORTING ER_DATA_CHANGED.
+
+ENDCLASS.
+CLASS LCL_EVENT_HANDELR IMPLEMENTATION.
+
+  METHOD ON_DATA_CHANGED.
+    PERFORM DATA_CHANGED USING ER_DATA_CHANGED.
+    PERFORM REFRESH_ALV.
+  ENDMETHOD.
+
+ENDCLASS.

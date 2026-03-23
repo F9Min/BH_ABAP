@@ -1,0 +1,12 @@
+*&---------------------------------------------------------------------*
+*& Include          Z2512R0020_088_SCR
+*&---------------------------------------------------------------------*
+
+SELECTION-SCREEN BEGIN OF BLOCK B1 WITH FRAME TITLE TEXT-H01.
+
+  SELECT-OPTIONS : S_KOKRS  FOR ACDOCA-KOKRS  NO INTERVALS NO-EXTENSION OBLIGATORY,
+                   S_RBUKRS FOR ACDOCA-RBUKRS NO INTERVALS NO-EXTENSION,
+                   S_GJAHR  FOR ACDOCA-GJAHR  NO INTERVALS NO-EXTENSION OBLIGATORY,
+                   S_POPER  FOR ACDOCA-POPER  NO INTERVALS NO-EXTENSION OBLIGATORY.
+
+SELECTION-SCREEN END OF BLOCK B1.
